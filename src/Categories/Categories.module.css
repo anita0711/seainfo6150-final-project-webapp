@@ -1,0 +1,6 @@
+.categories {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0px 100px;
+}
