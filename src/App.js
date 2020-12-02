@@ -1,11 +1,13 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
+import styles from "./App.module.css";
 
 import Home from "./Home/Home.jsx";
 import Foo from "./Foo/Foo.jsx";
 import Bar from "./Bar/Bar.jsx";
 import Baz from "./Baz/Baz.jsx";
 import Error from "./Error/Error.jsx";
+import Header from "./Header/Header";
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
@@ -16,13 +18,25 @@ const externalContent = {
   text: "Some text in the article",
 };
 
-function App() {
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Switch>
+        <Route path="/" exact component={Home} />
+      </Switch>
+      <Home />
+    </>
+  );
+};
+
+/*function App() {
   return (
     <>
       <header>
         <nav>
           <ul>
-            {/* these links should show you how to connect up a link to a specific route */}
+            {/* these links should show you how to connect up a link to a specific route //}
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -39,11 +53,11 @@ function App() {
         </nav>
       </header>
       {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
+            renders the first one that matches the current URL. //}
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/foo" exact component={Foo} />
-        {/* passing parameters via a route path */}
+        {/* passing parameters via a route path //}
         <Route
           path="/bar/:categoryId/:productId"
           exact
@@ -65,6 +79,6 @@ function App() {
       </Switch>
     </>
   );
-}
+} */
 
 export default App;

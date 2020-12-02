@@ -3,4 +3,19 @@
   flex-flow: row wrap;
   justify-content: space-between;
   padding: 0px 100px;
+  list-style: none;
+  font-size: 1.5em;
+  background-color: rgb(154, 226, 208);
+  height: 38px;
+}
+
+li:grow {
+  display: inline-block;
+  width: 1.1em;
+  transition: all 0.2s ease-in-out;
+}
+
+li:hover {
+  transform: scale(1.5);
+  cursor: pointer;
 }
