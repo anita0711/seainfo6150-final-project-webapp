@@ -32,6 +32,8 @@ const Place = (props) => {
             img2={place.img2._url}
             img3={place.img3._url}
             img4={place.img4._url}
+            img5={place.img5._url}
+            imageTitle={place.title}
             state={place.state}
             about={place.shortDescription}
             description={place.description}

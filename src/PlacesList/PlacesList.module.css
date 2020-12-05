@@ -1,11 +1,7 @@
 .placesList {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   list-style: none;
-  column-gap: 30px;
-  row-gap: 15px;
-}
-
-.heading {
-  font-weight: bold;
+  column-gap: 25px;
+  row-gap: 25px;
 }

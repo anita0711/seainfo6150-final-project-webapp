@@ -10,6 +10,7 @@ const PlaceListItem = (props) => {
         img2={props.img2}
         img3={props.img3}
         img4={props.img4}
+        img5={props.img5}
       />
       <p>{props.title}</p>
     </div>

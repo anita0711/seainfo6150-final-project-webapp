@@ -46,12 +46,14 @@ const App = () => {
   let showHighlyRatedPlaces;
   let showSummerPlaces;
   let showFallPlaces;
+  let showKidsPlaces;
 
   if (!isEmpty(fetchedData)) {
     const highlyRatedPlaces = Object.values(fetchedData.highlyRatedPlaces);
     const summerPlaces = Object.values(fetchedData.summer);
     const fallPlaces = Object.values(fetchedData.fall);
-    const allPlaces = summerPlaces.concat(fallPlaces);
+    const kidsPlaces = Object.values(fetchedData.kids);
+    const allPlaces = summerPlaces.concat(fallPlaces).concat(kidsPlaces);
 
     showHighlyRatedPlaces = (
       <PlacesList places={highlyRatedPlaces} pageTitle="Highly Rated Places" />
@@ -63,10 +65,10 @@ const App = () => {
       />
     );
     showFallPlaces = (
-      <PlacesList
-        places={fallPlaces}
-        pageTitle="Best places for Fall season "
-      />
+      <PlacesList places={fallPlaces} pageTitle="Best places for Fall season" />
+    );
+    showKidsPlaces = (
+      <PlacesList places={kidsPlaces} pageTitle="Best places for Kids" />
     );
     showAllPlaces = <PlacesList places={allPlaces} pageTitle="All places" />;
   } else {
@@ -90,6 +92,11 @@ const App = () => {
         <img className={styles.loading} src={Loading} alt="loading" />
       </div>
     );
+    showKidsPlaces = (
+      <div>
+        <img className={styles.loading} src={Loading} alt="loading" />
+      </div>
+    );
   }
 
   return (
@@ -102,8 +109,14 @@ const App = () => {
         <Route path="/contactUs" exact component={ContactUs} />
         <Route path="/feedback" exact component={Feedback} />
         <Route path="/allPlaces" exact render={() => showAllPlaces} />
-        <Route path="/summerPlaces" exact render={() => showSummerPlaces} />
-        <Route path="/fallPlaces" exact render={() => showFallPlaces} />
+        <Route path="/summer" exact render={() => showSummerPlaces} />
+        <Route path="/fall" exact render={() => showFallPlaces} />
+        <Route path="/winter" exact render={() => showFallPlaces} />
+        <Route path="/spring" exact render={() => showFallPlaces} />
+        <Route path="/kids" exact render={() => showKidsPlaces} />
+        <Route path="/hiking" exact render={() => showFallPlaces} />
+        <Route path="/scenary" exact render={() => showFallPlaces} />
+        <Route path="/camping" exact render={() => showFallPlaces} />
         <Route
           path="/place/:category/:placeId"
           exact

@@ -6,10 +6,11 @@ const PlaceDetails = (props) => {
   return (
     <div>
       <div className={styles.imageSection}>
-        <img src={props.img1} alt="place image" />
-        <img src={props.img2} alt="place image" />
-        <img src={props.img3} alt="place image" />
-        <img src={props.img4} alt="place image" />
+        <img src={props.img1} alt={props.title} />
+        <img src={props.img2} alt={props.title} />
+        <img src={props.img3} alt={props.title} />
+        <img src={props.img4} alt={props.title} />
+        <img src={props.img5} alt={props.title} />
       </div>
       <p>
         <h3>Details:</h3>
