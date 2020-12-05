@@ -1,7 +1,7 @@
 .container {
   background-color: gray;
   padding: 5px;
-  height: 20px;
+  height: 25px;
   margin: 10px;
   color: white;
   font-weight: bold;
@@ -9,4 +9,21 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  list-style: none;
+}
+
+.optionLink {
+  text-decoration-line: none;
+  color: white;
+}
+
+.option:grow {
+  display: inline-block;
+  width: 1.1em;
+  transition: all 0.2s ease-in-out;
+}
+
+.option:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }

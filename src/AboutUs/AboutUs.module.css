@@ -1,0 +1,14 @@
+.aboutUsSection {
+  background: #ccc;
+}
+
+.aboutUs {
+  font-family: "Kalam";
+  font-size: large;
+  margin: 5px;
+}
+
+.note {
+  font-size: small;
+  margin: 15px;
+}

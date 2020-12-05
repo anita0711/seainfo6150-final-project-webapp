@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Switch, Route, Link } from "react-router-dom";
 import styles from "./App.module.css";
-
+import { isEmpty } from "lodash";
 import Home from "./Home/Home.jsx";
 import Foo from "./Foo/Foo.jsx";
 import Bar from "./Bar/Bar.jsx";
 import Baz from "./Baz/Baz.jsx";
 import Error from "./Error/Error.jsx";
 import Header from "./Header/Header";
+import PlacesList from "./PlacesList/PlacesList";
+import Place from "./Place/Place";
+import AboutUs from "./AboutUs/AboutUs";
+import Loading from "./images/loading.gif";
+import Footer from "./Footer/Footer";
+import ContactUs from "./ContactUs/ContactUs";
+import Careers from "./Careers/Careers";
+import Feedback from "./Feedback/Feedback";
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
@@ -19,13 +27,95 @@ const externalContent = {
 };
 
 const App = () => {
+  const [fetchedData, setFetchedData] = useState({});
+
+  useEffect(() => {
+    // data fetching code
+    const fetchData = async () => {
+      const result = await fetch("https://demo3996095.mockable.io/places");
+      const resultJson = await result.json();
+      setFetchedData(resultJson);
+    };
+
+    if (isEmpty(fetchedData)) {
+      fetchData();
+    }
+  }, [fetchedData]);
+
+  let showAllPlaces;
+  let showHighlyRatedPlaces;
+  let showSummerPlaces;
+  let showFallPlaces;
+
+  if (!isEmpty(fetchedData)) {
+    const highlyRatedPlaces = Object.values(fetchedData.highlyRatedPlaces);
+    const summerPlaces = Object.values(fetchedData.summer);
+    const fallPlaces = Object.values(fetchedData.fall);
+    const allPlaces = summerPlaces.concat(fallPlaces);
+
+    showHighlyRatedPlaces = (
+      <PlacesList places={highlyRatedPlaces} pageTitle="Highly Rated Places" />
+    );
+    showSummerPlaces = (
+      <PlacesList
+        places={summerPlaces}
+        pageTitle="Best places for Summer season"
+      />
+    );
+    showFallPlaces = (
+      <PlacesList
+        places={fallPlaces}
+        pageTitle="Best places for Fall season "
+      />
+    );
+    showAllPlaces = <PlacesList places={allPlaces} pageTitle="All places" />;
+  } else {
+    showAllPlaces = (
+      <div>
+        <img className={styles.loading} src={Loading} alt="loading" />
+      </div>
+    );
+    showHighlyRatedPlaces = (
+      <div>
+        <img className={styles.loading} src={Loading} alt="loading" />
+      </div>
+    );
+    showSummerPlaces = (
+      <div>
+        <img className={styles.loading} src={Loading} alt="loading" />
+      </div>
+    );
+    showFallPlaces = (
+      <div>
+        <img className={styles.loading} src={Loading} alt="loading" />
+      </div>
+    );
+  }
+
   return (
     <>
       <Header />
       <Switch>
         <Route path="/" exact component={Home} />
+        <Route path="/aboutUs" exact component={AboutUs} />
+        <Route path="/careers" exact component={Careers} />
+        <Route path="/contactUs" exact component={ContactUs} />
+        <Route path="/feedback" exact component={Feedback} />
+        <Route path="/allPlaces" exact render={() => showAllPlaces} />
+        <Route path="/summerPlaces" exact render={() => showSummerPlaces} />
+        <Route path="/fallPlaces" exact render={() => showFallPlaces} />
+        <Route
+          path="/place/:category/:placeId"
+          exact
+          render={({ match }) => (
+            <Place
+              placeId={match.params.placeId}
+              category={match.params.category}
+            />
+          )}
+        />
       </Switch>
-      <Home />
+      <Footer />
     </>
   );
 };
