@@ -9,6 +9,12 @@
   height: 250px;
   align-self: center;
   justify-self: center;
-  border-radius: 10%;
+  border-radius: 20px;
   margin: 0px;
+  border: 5px solid blueviolet;
+}
+
+.image img:hover {
+  box-shadow: 10px 10px 20px rgb(68, 139, 120);
+  cursor: pointer;
 }

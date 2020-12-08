@@ -46,14 +46,28 @@ const App = () => {
   let showHighlyRatedPlaces;
   let showSummerPlaces;
   let showFallPlaces;
+  let showSpringPlaces;
+  let showWinterPlaces;
   let showKidsPlaces;
+  let showHikingPlaces;
+  let showScenaryPlaces;
+  let showCampingPlaces;
 
   if (!isEmpty(fetchedData)) {
     const highlyRatedPlaces = Object.values(fetchedData.highlyRatedPlaces);
     const summerPlaces = Object.values(fetchedData.summer);
     const fallPlaces = Object.values(fetchedData.fall);
+    const springPlaces = Object.values(fetchedData.spring);
+    const winterPlaces = Object.values(fetchedData.winter);
     const kidsPlaces = Object.values(fetchedData.kids);
-    const allPlaces = summerPlaces.concat(fallPlaces).concat(kidsPlaces);
+    /* const hikingPlaces = Object.values(fetchedData.hiking);
+    const sightSeeingPlaces = Object.values(fetchedData.sightSeeing);
+    const campingPlaces = Object.values(fetchedData.camping);*/
+    const allPlaces = summerPlaces
+      .concat(fallPlaces)
+      .concat(winterPlaces)
+      .concat(springPlaces)
+      .concat(kidsPlaces);
 
     showHighlyRatedPlaces = (
       <PlacesList places={highlyRatedPlaces} pageTitle="Highly Rated Places" />
@@ -66,6 +80,18 @@ const App = () => {
     );
     showFallPlaces = (
       <PlacesList places={fallPlaces} pageTitle="Best places for Fall season" />
+    );
+    showSpringPlaces = (
+      <PlacesList
+        places={springPlaces}
+        pageTitle="Best places for Spring season"
+      />
+    );
+    showWinterPlaces = (
+      <PlacesList
+        places={winterPlaces}
+        pageTitle="Best places for Winter season"
+      />
     );
     showKidsPlaces = (
       <PlacesList places={kidsPlaces} pageTitle="Best places for Kids" />
@@ -92,7 +118,32 @@ const App = () => {
         <img className={styles.loading} src={Loading} alt="loading" />
       </div>
     );
+    showWinterPlaces = (
+      <div>
+        <img className={styles.loading} src={Loading} alt="loading" />
+      </div>
+    );
+    showSpringPlaces = (
+      <div>
+        <img className={styles.loading} src={Loading} alt="loading" />
+      </div>
+    );
     showKidsPlaces = (
+      <div>
+        <img className={styles.loading} src={Loading} alt="loading" />
+      </div>
+    );
+    showHikingPlaces = (
+      <div>
+        <img className={styles.loading} src={Loading} alt="loading" />
+      </div>
+    );
+    showScenaryPlaces = (
+      <div>
+        <img className={styles.loading} src={Loading} alt="loading" />
+      </div>
+    );
+    showCampingPlaces = (
       <div>
         <img className={styles.loading} src={Loading} alt="loading" />
       </div>
@@ -111,12 +162,12 @@ const App = () => {
         <Route path="/allPlaces" exact render={() => showAllPlaces} />
         <Route path="/summer" exact render={() => showSummerPlaces} />
         <Route path="/fall" exact render={() => showFallPlaces} />
-        <Route path="/winter" exact render={() => showFallPlaces} />
-        <Route path="/spring" exact render={() => showFallPlaces} />
+        <Route path="/winter" exact render={() => showWinterPlaces} />
+        <Route path="/spring" exact render={() => showSpringPlaces} />
         <Route path="/kids" exact render={() => showKidsPlaces} />
-        <Route path="/hiking" exact render={() => showFallPlaces} />
-        <Route path="/scenary" exact render={() => showFallPlaces} />
-        <Route path="/camping" exact render={() => showFallPlaces} />
+        <Route path="/hiking" exact render={() => showHikingPlaces} />
+        <Route path="/scenary" exact render={() => showScenaryPlaces} />
+        <Route path="/camping" exact render={() => showCampingPlaces} />
         <Route
           path="/place/:category/:placeId"
           exact

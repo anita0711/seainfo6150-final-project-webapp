@@ -1,4 +1,24 @@
-.title {
-  color: blueviolet;
+.disneyLand {
+  background-image: url("../images/HighlyRatedPlaces/Disneyland.jpg");
+  border: 5px solid blueviolet;
+  border-radius: 20px;
   text-align: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-flow: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 15px;
+}
+
+.containerItem {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }

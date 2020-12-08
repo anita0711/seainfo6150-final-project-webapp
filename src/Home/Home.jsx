@@ -1,14 +1,8 @@
 import React from "react";
-import Form from "../Form/Form";
-import treefrog from "../images/treefrog.jpg";
 import styles from "./Home.module.css";
-
-import HighlyRatedPlaces from "../HighlyRatedPlaces/HighlyRatedPlaces";
-import MostVisitedPlaces from "../MostVisitedPlaces/MostVisitedPlaces";
-import PocketSuitable from "../PocketSuitable/PocketSuitable";
-import Footer from "../Footer/Footer";
 import { Link } from "react-router-dom";
-
+import disneyLand from "../images/HighlyRatedPlaces/Disneyland.jpg";
+import PlaceImage from "../PlaceImage/PlaceImage";
 const Home = () => {
   return (
     <>
@@ -17,39 +11,46 @@ const Home = () => {
           <div>
             <h3>Highly Rated Places</h3>
           </div>
-          <ul className="">
-            <Link className="" to="">
-              <li className="">Disneyland</li>
+          <div className={styles.container}>
+            <Link
+              to="place/kids/001-orlandoWaltDisneyWorld"
+              className={styles.containerItem}
+            >
+              <PlaceImage
+                img1={disneyLand}
+                title="Disneyland"
+                className={styles.image}
+              />
+              <p>Disneyland</p>
+            </Link>
+            <Link className="" to="place/summer/001-yellowstone">
+              Yellowstone
             </Link>
             <Link className="" to="">
-              <li className="">Yellowstone</li>
+              Alaska
             </Link>
             <Link className="" to="">
-              <li className="">Alaska</li>
+              Boston
             </Link>
-            <Link className="" to="">
-              <li className="">Boston</li>
-            </Link>
-          </ul>
+          </div>
         </div>
+
         <div className="mostVisitedPlacesSection">
           <div>
             <h3>Most Visited Places</h3>
           </div>
-          <ul className="">
-            <Link className="" to="">
-              <li className="">Yosemite</li>
-            </Link>
-            <Link className="" to="">
-              <li className="">Grand Teton National Park</li>
-            </Link>
-            <Link className="" to="">
-              <li className="">Grand Canyon</li>
-            </Link>
-            <Link className="" to="">
-              <li className="">Asheville</li>
-            </Link>
-          </ul>
+          <Link className="" to="">
+            Yosemite
+          </Link>
+          <Link className="" to="place/summer/002-grandTetonNationalPark">
+            Grand Teton National Park
+          </Link>
+          <Link className="" to="">
+            Grand Canyon
+          </Link>
+          <Link className="" to="">
+            Asheville
+          </Link>
         </div>
       </main>
     </>

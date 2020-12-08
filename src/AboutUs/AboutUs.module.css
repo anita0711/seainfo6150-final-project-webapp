@@ -1,14 +1,87 @@
 .aboutUsSection {
-  background: #ccc;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
+}
+
+.imageSection {
+  align-self: center;
+  justify-self: center;
+}
+
+.image {
+  height: auto;
+  width: 100%;
+  border-radius: 20px;
 }
 
 .aboutUs {
-  font-family: "Kalam";
   font-size: large;
-  margin: 5px;
+}
+
+.aboutUsHeading {
+  background-color: rgb(78, 122, 128);
+  color: white;
+  border-radius: 10px;
+  width: 162px;
 }
 
 .note {
   font-size: small;
   margin: 15px;
 }
+
+/*
+* {
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  flex-flow: column;
+}
+
+.image {
+  background-image: url("../images/about-us-background.jpg");
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutUs {
+  width: 500px;
+  height: 500px;
+}
+/*.image {
+  background-image: url("../images/about-us-background.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: blur(5px);
+}
+
+.aboutUs {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  width: 50%;
+  padding: 40px 0px;
+  text-align: center;
+  border-top-left-radius: 70px;
+  border-bottom-right-radius: 70px;
+  background-color: (0, 0, 0, 0.3);
+  color: #fff;
+  border: 10px inset #fff;
+} 
+
+.aboutUs p {
+  padding: 0 8%;
+} */
