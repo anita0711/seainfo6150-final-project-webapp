@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.image {
+  align-self: center;
+  justify-self: center;
+}

@@ -16,6 +16,7 @@ import Footer from "./Footer/Footer";
 import ContactUs from "./ContactUs/ContactUs";
 import Careers from "./Careers/Careers";
 import Feedback from "./Feedback/Feedback";
+import ThankYou from "./ThankYou/ThankYou";
 
 // here is some external content. look at the /baz route below
 // to see how this content is passed down to the components via props
@@ -178,6 +179,7 @@ const App = () => {
             />
           )}
         />
+        <Route path="/thankyou" exact component={ThankYou} />
       </Switch>
       <Footer />
     </>

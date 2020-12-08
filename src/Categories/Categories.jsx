@@ -19,7 +19,7 @@ const Categories = function () {
 
       <div className={styles.dropdown}>
         <button className={styles.dropbtn}>
-          Travel by Season <i class="fa fa-caret-down"></i>
+          Travel by Season <i className="fa fa-caret-down"></i>
         </button>
         <div className={styles.dropdownContent}>
           <Link to="/spring" className={styles.subCategoryItem}>
@@ -39,7 +39,7 @@ const Categories = function () {
 
       <div className={styles.dropdown}>
         <button className={styles.dropbtn}>
-          Best fit for <i class="fa fa-caret-down"></i>
+          Best fit for <i className="fa fa-caret-down"></i>
         </button>
         <div className={styles.dropdownContent}>
           <Link to="/kids" className={styles.subCategoryItem}>
