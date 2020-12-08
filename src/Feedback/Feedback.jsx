@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Feedback.module.css";
-import feedback from "../images/feedback.png";
+import feedbackImage from "../images/feedback.png";
 import { Link } from "react-router-dom";
 
 const Feedback = () => {
@@ -39,7 +39,7 @@ const Feedback = () => {
           <div className={styles.feedbackForm}>
             <div className={styles.imageSection}>
               <img
-                src={feedback}
+                src={feedbackImage}
                 alt="Feedback form"
                 className={styles.image}
               />

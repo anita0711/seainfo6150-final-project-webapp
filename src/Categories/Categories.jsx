@@ -51,9 +51,6 @@ const Categories = function () {
           <Link to="/scenary" className={styles.subCategoryItem}>
             Scenary
           </Link>
-          <Link to="/camping" className={styles.subCategoryItem}>
-            Camping
-          </Link>
         </div>
       </div>
 

@@ -3,10 +3,6 @@ import { Switch, Route, Link } from "react-router-dom";
 import styles from "./App.module.css";
 import { isEmpty } from "lodash";
 import Home from "./Home/Home.jsx";
-import Foo from "./Foo/Foo.jsx";
-import Bar from "./Bar/Bar.jsx";
-import Baz from "./Baz/Baz.jsx";
-import Error from "./Error/Error.jsx";
 import Header from "./Header/Header";
 import PlacesList from "./PlacesList/PlacesList";
 import Place from "./Place/Place";
@@ -14,7 +10,6 @@ import AboutUs from "./AboutUs/AboutUs";
 import Loading from "./images/loading.gif";
 import Footer from "./Footer/Footer";
 import ContactUs from "./ContactUs/ContactUs";
-import Careers from "./Careers/Careers";
 import Feedback from "./Feedback/Feedback";
 import ThankYou from "./ThankYou/ThankYou";
 
@@ -52,7 +47,6 @@ const App = () => {
   let showKidsPlaces;
   let showHikingPlaces;
   let showScenaryPlaces;
-  let showCampingPlaces;
 
   if (!isEmpty(fetchedData)) {
     const highlyRatedPlaces = Object.values(fetchedData.highlyRatedPlaces);
@@ -61,14 +55,14 @@ const App = () => {
     const springPlaces = Object.values(fetchedData.spring);
     const winterPlaces = Object.values(fetchedData.winter);
     const kidsPlaces = Object.values(fetchedData.kids);
-    /* const hikingPlaces = Object.values(fetchedData.hiking);
-    const sightSeeingPlaces = Object.values(fetchedData.sightSeeing);
-    const campingPlaces = Object.values(fetchedData.camping);*/
+    const hikingPlaces = Object.values(fetchedData.hiking);
+    /*const sightSeeingPlaces = Object.values(fetchedData.sightSeeing);*/
     const allPlaces = summerPlaces
       .concat(fallPlaces)
       .concat(winterPlaces)
       .concat(springPlaces)
-      .concat(kidsPlaces);
+      .concat(kidsPlaces)
+      .concat(hikingPlaces);
 
     showHighlyRatedPlaces = (
       <PlacesList places={highlyRatedPlaces} pageTitle="Highly Rated Places" />
@@ -96,6 +90,9 @@ const App = () => {
     );
     showKidsPlaces = (
       <PlacesList places={kidsPlaces} pageTitle="Best places for Kids" />
+    );
+    showHikingPlaces = (
+      <PlacesList places={hikingPlaces} pageTitle="Best places for Hiking" />
     );
     showAllPlaces = <PlacesList places={allPlaces} pageTitle="All places" />;
   } else {
@@ -144,11 +141,6 @@ const App = () => {
         <img className={styles.loading} src={Loading} alt="loading" />
       </div>
     );
-    showCampingPlaces = (
-      <div>
-        <img className={styles.loading} src={Loading} alt="loading" />
-      </div>
-    );
   }
 
   return (
@@ -157,7 +149,6 @@ const App = () => {
       <Switch>
         <Route path="/" exact component={Home} />
         <Route path="/aboutUs" exact component={AboutUs} />
-        <Route path="/careers" exact component={Careers} />
         <Route path="/contactUs" exact component={ContactUs} />
         <Route path="/feedback" exact component={Feedback} />
         <Route path="/allPlaces" exact render={() => showAllPlaces} />
@@ -168,7 +159,6 @@ const App = () => {
         <Route path="/kids" exact render={() => showKidsPlaces} />
         <Route path="/hiking" exact render={() => showHikingPlaces} />
         <Route path="/scenary" exact render={() => showScenaryPlaces} />
-        <Route path="/camping" exact render={() => showCampingPlaces} />
         <Route
           path="/place/:category/:placeId"
           exact

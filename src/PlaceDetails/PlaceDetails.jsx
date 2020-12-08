@@ -1,19 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styles from "./PlaceDetails.module.css";
+import ImageSlides from "../ImageSlides/ImageSlides";
 
 const PlaceDetails = (props) => {
   return (
-    <div>
-      <div className={styles.imageSection}>
-        <img src={props.img1} alt={props.title} />
-        <img src={props.img2} alt={props.title} />
-        <img src={props.img3} alt={props.title} />
-        <img src={props.img4} alt={props.title} />
-        <img src={props.img5} alt={props.title} />
+    <>
+      <div>
+        <ImageSlides
+          img1={props.img1}
+          img2={props.img2}
+          img3={props.img3}
+          img4={props.img4}
+          img5={props.img5}
+          title={props.title}
+        />
       </div>
+
+      <h3>Details:</h3>
       <p>
-        <h3>Details:</h3>
         State: {props.state} <br />
         About: {props.about} <br />
         Description: {props.description} <br />
@@ -24,7 +28,7 @@ const PlaceDetails = (props) => {
         Hotels: <a href={props.hotels}>See here</a> <br />
         Map: <a href={props.map}>See here</a> <br />
       </p>
-    </div>
+    </>
   );
 };
 

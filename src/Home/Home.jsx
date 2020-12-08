@@ -2,6 +2,12 @@ import React from "react";
 import styles from "./Home.module.css";
 import { Link } from "react-router-dom";
 import disneyLand from "../images/HighlyRatedPlaces/Disneyland.jpg";
+import yellowstone from "../images/HighlyRatedPlaces/Yellowstone.jpg";
+import newYork from "../images/HighlyRatedPlaces/NewYork.jpg";
+import lakeTahoe from "../images/MostVisitedPlaces/Lake-Tahoe.jpg";
+import yosemite from "../images/MostVisitedPlaces/Yosemite.jpg";
+import washingtonDC from "../images/MostVisitedPlaces/Washington-DC.jpg";
+
 import PlaceImage from "../PlaceImage/PlaceImage";
 const Home = () => {
   return (
@@ -23,14 +29,29 @@ const Home = () => {
               />
               <p>Disneyland</p>
             </Link>
-            <Link className="" to="place/summer/001-yellowstone">
-              Yellowstone
+
+            <Link
+              to="place/summer/001-yellowstone"
+              className={styles.containerItem}
+            >
+              <PlaceImage
+                img1={yellowstone}
+                title="Yellowstone"
+                className={styles.image}
+              />
+              <p>Yellowstone</p>
             </Link>
-            <Link className="" to="">
-              Alaska
-            </Link>
-            <Link className="" to="">
-              Boston
+
+            <Link
+              to="/place/winter/003-newYork"
+              className={styles.containerItem}
+            >
+              <PlaceImage
+                img1={newYork}
+                title="New York"
+                className={styles.image}
+              />
+              <p>New York</p>
             </Link>
           </div>
         </div>
@@ -39,18 +60,43 @@ const Home = () => {
           <div>
             <h3>Most Visited Places</h3>
           </div>
-          <Link className="" to="">
-            Yosemite
-          </Link>
-          <Link className="" to="place/summer/002-grandTetonNationalPark">
-            Grand Teton National Park
-          </Link>
-          <Link className="" to="">
-            Grand Canyon
-          </Link>
-          <Link className="" to="">
-            Asheville
-          </Link>
+          <div className={styles.container}>
+            <Link
+              to="/place/winter/002-lakeTahoe"
+              className={styles.containerItem}
+            >
+              <PlaceImage
+                img1={lakeTahoe}
+                title="Lake Tahoe"
+                className={styles.image}
+              />
+              <p>Lake Tahoe</p>
+            </Link>
+
+            <Link
+              to="/place/hiking/001-yosemite"
+              className={styles.containerItem}
+            >
+              <PlaceImage
+                img1={yosemite}
+                title="Yosemite"
+                className={styles.image}
+              />
+              <p>Yosemite</p>
+            </Link>
+
+            <Link
+              to="/place/spring/003-washingtonDC"
+              className={styles.containerItem}
+            >
+              <PlaceImage
+                img1={washingtonDC}
+                title="Washington DC"
+                className={styles.image}
+              />
+              <p>Washington DC</p>
+            </Link>
+          </div>
         </div>
       </main>
     </>

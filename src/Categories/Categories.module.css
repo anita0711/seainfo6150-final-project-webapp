@@ -14,12 +14,6 @@
   color: rgb(221, 95, 22);
 }
 
-/*.category:grow {
-  display: inline-block;
-  width: 1.1em;
-  transition: all 0.2s ease-in-out;
-}*/
-
 .category:hover {
   transform: scale(1.1);
   cursor: pointer;

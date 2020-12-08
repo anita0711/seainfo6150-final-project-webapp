@@ -9,11 +9,11 @@ const PlacesList = (props) => {
       <div className={styles.heading}>{props.pageTitle}</div>
       <ul className={styles.placesList}>
         {props.places.map((place, index) => (
-          <Link to={`/place/${place.category}/${place.placeId}`}>
-            <li key={index}>
+          <li key={index}>
+            <Link to={`/place/${place.category}/${place.placeId}`}>
               <PlaceListItem img1={place.img1._url} title={place.title} />
-            </li>
-          </Link>
+            </Link>
+          </li>
         ))}
       </ul>
     </div>
