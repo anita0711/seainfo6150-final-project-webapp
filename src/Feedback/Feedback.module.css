@@ -111,3 +111,9 @@ textarea:focus {
   color: white;
   text-decoration: none;
 }
+
+.formElements {
+  font-family: "Merienda";
+  font-size: small;
+  color: rgb(77, 77, 77);
+}

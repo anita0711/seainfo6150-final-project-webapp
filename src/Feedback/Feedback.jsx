@@ -24,6 +24,11 @@ const Feedback = () => {
             Email address: <i>{submittedForm.get("email")}</i> <br />
             Phone number: <i>{submittedForm.get("phoneNumber")}</i> <br />
             Gender: <i>{submittedForm.get("gender")}</i> <br />
+            How would you rate us?: <i>{submittedForm.get("rate")}</i> <br />
+            Would you recommend us to your family and friends?:{" "}
+            <i>{submittedForm.get("recommend")}</i> <br />
+            How did you hear about us?:{" "}
+            <i>{submittedForm.get("hearAboutUs")}</i> <br />
             Feedback: <i>{submittedForm.get("feedback")}</i> <br />
           </div>
           <div>
@@ -73,11 +78,13 @@ const Feedback = () => {
                   type="tel"
                   name="phoneNumber"
                   id="phoneId"
-                  placeholder="Phone number, example: (987)-654-3210 (required)"
+                  placeholder="Phone number, example: 987-654-3210 (required)"
                   className={styles.inputField}
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                   required
                 />
               </div>
+
               <div>
                 <select
                   name="gender"
@@ -95,6 +102,67 @@ const Feedback = () => {
                 </select>
               </div>
 
+              <label
+                htmlFor="hearAboutUsDropdown"
+                className={styles.formElements}
+              >
+                How did you hear about us?
+              </label>
+              <div>
+                <select
+                  name="hearAboutUs"
+                  id="hearAboutUsDropdown"
+                  className={styles.genderDropdown}
+                >
+                  <option disabled selected value>
+                    Select
+                  </option>
+                  <option value="Newsletter">Newsletter</option>
+                  <option value="Friend">Friend</option>
+                  <option value="Employee at Travelers">
+                    Employee at Travelers
+                  </option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div className={styles.formElements}>
+                How would you rate us? <br />
+                <input type="radio" id="1" name="rate" value="Worse" />
+                <label htmlFor="Worse"> Worse </label>
+                <input type="radio" id="2" name="rate" value="Bad" />
+                <label htmlFor="2"> Bad </label>
+                <input type="radio" id="3" name="rate" value="Neutral" />
+                <label htmlFor="3"> Neutral </label>
+                <input type="radio" id="4" name="rate" value="Good" />
+                <label htmlFor="4"> Good </label>
+                <input type="radio" id="5" name="rate" value="Best" />
+                <label htmlFor="5"> Best </label>
+              </div>
+
+              <div className={styles.formElements}>
+                Would you recommend us to your family and friends? <br />
+                <input
+                  type="radio"
+                  id="1"
+                  name="recommend"
+                  value="Strongly No"
+                />
+                <label htmlFor="Worse"> Strongly No </label>
+                <input type="radio" id="2" name="recommend" value="No" />
+                <label htmlFor="2"> No </label>
+                <input type="radio" id="3" name="recommend" value="May be" />
+                <label htmlFor="3"> May be </label>
+                <input type="radio" id="4" name="recommend" value="Yes" />
+                <label htmlFor="4"> Yes </label>
+                <input
+                  type="radio"
+                  id="5"
+                  name="recommend"
+                  value="Strongly Yes"
+                />
+                <label htmlFor="5"> Strongly Yes </label>
+              </div>
               <div>
                 <textarea
                   name="feedback"
