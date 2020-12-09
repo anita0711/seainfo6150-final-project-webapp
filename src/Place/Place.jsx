@@ -24,7 +24,7 @@ const Place = (props) => {
     showPlaceDetails = (
       <div className={styles.wallpaper}>
         <div className={styles.title}>
-          <h2>{place.title}</h2>
+          <h3>{place.title}</h3>
         </div>
         <div>
           <PlaceDetails

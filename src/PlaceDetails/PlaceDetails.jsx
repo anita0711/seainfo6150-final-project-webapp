@@ -1,24 +1,19 @@
 import React from "react";
 import styles from "./PlaceDetails.module.css";
-import ImageSlides from "../ImageSlides/ImageSlides";
 
 const PlaceDetails = (props) => {
   return (
-    <>
-      <div>
-        <ImageSlides
-          img1={props.img1}
-          img2={props.img2}
-          img3={props.img3}
-          img4={props.img4}
-          img5={props.img5}
-          title={props.title}
-        />
+    <div>
+      <div className={styles.imageSection}>
+        <img src={props.img1} alt={props.imageTitle} />
+        <img src={props.img2} alt={props.imageTitle} />
+        <img src={props.img3} alt={props.imageTitle} />
+        <img src={props.img4} alt={props.imageTitle} />
+        <img src={props.img5} alt={props.imageTitle} />
       </div>
       <div className={styles.detailsTag}>
         <h3>Details:</h3>
       </div>
-
       <div className={styles.detailsContainer}>
         <p>State:</p>
         <p>{props.state} </p>
@@ -43,7 +38,7 @@ const PlaceDetails = (props) => {
           <a href={props.map}>See here</a>
         </p>
       </div>
-    </>
+    </div>
   );
 };
 
