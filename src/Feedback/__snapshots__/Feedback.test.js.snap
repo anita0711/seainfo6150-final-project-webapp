@@ -58,73 +58,77 @@ exports[`renders the Feedback component correctly 1`] = `
             />
           </div>
           <div>
-            <select
-              class="genderDropdown"
-              id="genderDropdown"
-              name="gender"
+            <label
+              class="formElements"
+              for="genderDropdown"
             >
-              <option
-                disabled=""
-                value="true"
+              Gender:
+            </label>
+            <div>
+              <select
+                class="genderDropdown"
+                id="genderDropdown"
+                name="gender"
               >
-                Gender
-              </option>
-              <option
-                value="Male"
-              >
-                Male
-              </option>
-              <option
-                value="Female"
-              >
-                Female
-              </option>
-              <option
-                value="Don't Want To Answer"
-              >
-                Don't want to answer
-              </option>
-            </select>
+                <option
+                  value="Male"
+                >
+                  Male
+                </option>
+                <option
+                  value="Female"
+                >
+                  Female
+                </option>
+                <option
+                  value="Don't Want To Answer"
+                >
+                  Don't want to answer
+                </option>
+              </select>
+            </div>
           </div>
-          <label
-            class="formElements"
-            for="hearAboutUsDropdown"
-          >
-            How did you hear about us?
-          </label>
           <div>
-            <select
-              class="genderDropdown"
-              id="hearAboutUsDropdown"
-              name="hearAboutUs"
+            <label
+              class="formElements"
+              for="hearAboutUsDropdown"
             >
-              <option
-                disabled=""
-                value="true"
+              How did you hear about us?
+            </label>
+            <div>
+              <select
+                class="genderDropdown"
+                id="hearAboutUsDropdown"
+                name="hearAboutUs"
               >
-                Select
-              </option>
-              <option
-                value="Newsletter"
-              >
-                Newsletter
-              </option>
-              <option
-                value="Friend"
-              >
-                Friend
-              </option>
-              <option
-                value="Employee at Travelers"
-              >
-                Employee at Travelers
-              </option>
-              <option
-                value="Other"
-              >
-                Other
-              </option>
-            </select>
+                <option
+                  disabled=""
+                  value="true"
+                >
+                  Select
+                </option>
+                <option
+                  value="Newsletter"
+                >
+                  Newsletter
+                </option>
+                <option
+                  value="Friend"
+                >
+                  Friend
+                </option>
+                <option
+                  value="Employee at Travelers"
+                >
+                  Employee at Travelers
+                </option>
+                <option
+                  value="Other"
+                >
+                  Other
+                </option>
+              </select>
+            </div>
           </div>
           <div
             class="formElements"

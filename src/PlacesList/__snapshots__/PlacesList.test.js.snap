@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the PlacesList component correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="title"
+    >
+      <h3>
+        Best places for Summer season
+      </h3>
+    </div>
+    <ul
+      class="placesList"
+    >
+      <li
+        class="placeLink"
+      >
+        <a
+          href="/place/summer/001-yellowstone"
+        >
+          <div
+            class="placeListItem"
+          >
+            <img
+              alt="Yellowstone"
+              class="image"
+              src="https://www.planetware.com/photos-large/USWY/usa-wyoming-yellowstone-grand-prismatic-spring.jpg"
+            />
+            <p
+              class="placeName"
+            >
+              Yellowstone
+            </p>
+          </div>
+        </a>
+      </li>
+      <li
+        class="placeLink"
+      >
+        <a
+          href="/place/summer/004-glacierNationalPark"
+        >
+          <div
+            class="placeListItem"
+          >
+            <img
+              alt="Glacier National Park"
+              class="image"
+              src="https://www.doi.gov/sites/doi.gov/files/blog-post/thumbnail-images/glaciernpshanlin.jpg"
+            />
+            <p
+              class="placeName"
+            >
+              Glacier National Park
+            </p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;

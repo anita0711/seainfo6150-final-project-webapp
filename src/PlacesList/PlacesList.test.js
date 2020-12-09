@@ -29,7 +29,7 @@ it("renders the PlacesList component correctly", () => {
   const { container } = render(
     <BrowserRouter>
       <PlacesList
-        books={Object.values(placesTestList)}
+        places={Object.values(placesTestList)}
         pageTitle="Best places for Summer season"
       />
     </BrowserRouter>

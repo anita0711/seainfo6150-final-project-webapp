@@ -86,46 +86,48 @@ const Feedback = () => {
               </div>
 
               <div>
-                <select
-                  name="gender"
-                  id="genderDropdown"
-                  className={styles.genderDropdown}
-                >
-                  <option disabled selected value>
-                    Gender
-                  </option>
-                  <option value="Male">Male</option>
-                  <option value="Female">Female</option>
-                  <option value="Don't Want To Answer">
-                    Don't want to answer
-                  </option>
-                </select>
+                <label htmlFor="genderDropdown" className={styles.formElements}>
+                  Gender:
+                </label>
+                <div>
+                  <select
+                    name="gender"
+                    id="genderDropdown"
+                    className={styles.genderDropdown}
+                  >
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Don't Want To Answer">
+                      Don't want to answer
+                    </option>
+                  </select>
+                </div>
               </div>
-
-              <label
-                htmlFor="hearAboutUsDropdown"
-                className={styles.formElements}
-              >
-                How did you hear about us?
-              </label>
               <div>
-                <select
-                  name="hearAboutUs"
-                  id="hearAboutUsDropdown"
-                  className={styles.genderDropdown}
+                <label
+                  htmlFor="hearAboutUsDropdown"
+                  className={styles.formElements}
                 >
-                  <option disabled selected value>
-                    Select
-                  </option>
-                  <option value="Newsletter">Newsletter</option>
-                  <option value="Friend">Friend</option>
-                  <option value="Employee at Travelers">
-                    Employee at Travelers
-                  </option>
-                  <option value="Other">Other</option>
-                </select>
+                  How did you hear about us?
+                </label>
+                <div>
+                  <select
+                    name="hearAboutUs"
+                    id="hearAboutUsDropdown"
+                    className={styles.genderDropdown}
+                  >
+                    <option disabled selected value>
+                      Select
+                    </option>
+                    <option value="Newsletter">Newsletter</option>
+                    <option value="Friend">Friend</option>
+                    <option value="Employee at Travelers">
+                      Employee at Travelers
+                    </option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
               </div>
-
               <div className={styles.formElements}>
                 How would you rate us? <br />
                 <input type="radio" id="1" name="rate" value="Worse" />
@@ -169,7 +171,7 @@ const Feedback = () => {
                   id="messageId"
                   placeholder="Your feedback here.. (required)"
                   className={styles.messageTextField}
-                  maxlength="1000"
+                  maxLength="1000"
                   required
                 />
               </div>
