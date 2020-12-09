@@ -6,14 +6,14 @@ import "./Categories.module.css";
 const Categories = function () {
   return (
     <div className={styles.navbar}>
-      <Link to="/" className={styles.categoryLink}>
+      <Link to="/" className={styles.category}>
         <i className="fa" style={{ color: "white", fontSize: "20px" }}>
           &#xf015;
         </i>
         Home
       </Link>
 
-      <Link to="/allPlaces" className={styles.categoryLink}>
+      <Link to="/allPlaces" className={styles.category}>
         All Places
       </Link>
 
@@ -48,13 +48,13 @@ const Categories = function () {
           <Link to="/hiking" className={styles.subCategoryItem}>
             Hiking
           </Link>
-          <Link to="/scenary" className={styles.subCategoryItem}>
-            Scenary
+          <Link to="/sightseeing" className={styles.subCategoryItem}>
+            Sightseeing
           </Link>
         </div>
       </div>
 
-      <Link to="/aboutUs" className={styles.categoryLink}>
+      <Link to="/aboutUs" className={styles.category}>
         About Us
       </Link>
     </div>

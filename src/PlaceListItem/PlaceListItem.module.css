@@ -3,4 +3,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
+}
+
+.placeName {
+  color: black;
+  background-color: white;
+  font-size: large;
+  border-radius: 10px;
+}
+
+.placeName:hover {
+  color: white;
+  background-color: darkgray;
 }

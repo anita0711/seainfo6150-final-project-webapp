@@ -4,4 +4,14 @@
   list-style: none;
   column-gap: 25px;
   row-gap: 25px;
+  padding-left: 10px;
+}
+
+.title {
+  display: inline-block;
+  background-color: #ccc;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
 }

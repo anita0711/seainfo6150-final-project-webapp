@@ -44,14 +44,13 @@ const Feedback = () => {
                 className={styles.image}
               />
             </div>
-            <form onSubmit={onSubmit} className={styles.actualForm}>
+            <div className={styles.actualForm}>
               <div className={styles.formHeadingSection}>
                 <h1>Write to Us</h1>
               </div>
               <div>
                 <input
                   type="text"
-                  htmlFor="nameId"
                   name="name"
                   id="nameId"
                   placeholder="Full name (required)"
@@ -62,7 +61,6 @@ const Feedback = () => {
               <div>
                 <input
                   type="email"
-                  htmlFor="emailId"
                   name="email"
                   id="emailId"
                   placeholder="Email address, example: xyz@test.com (required)"
@@ -73,7 +71,6 @@ const Feedback = () => {
               <div>
                 <input
                   type="tel"
-                  htmlFor="phoneId"
                   name="phoneNumber"
                   id="phoneId"
                   placeholder="Phone number, example: (987)-654-3210 (required)"
@@ -83,7 +80,6 @@ const Feedback = () => {
               </div>
               <div>
                 <select
-                  htmlFor="gender"
                   name="gender"
                   id="genderDropdown"
                   className={styles.genderDropdown}
@@ -91,16 +87,16 @@ const Feedback = () => {
                   <option disabled selected value>
                     Gender
                   </option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="dontWantToAnswer">Don't want to answer</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Don't Want To Answer">
+                    Don't want to answer
+                  </option>
                 </select>
               </div>
 
               <div>
                 <textarea
-                  name="message"
-                  htmlFor="messageId"
                   name="feedback"
                   id="messageId"
                   placeholder="Your feedback here.. (required)"
@@ -112,7 +108,7 @@ const Feedback = () => {
               <div>
                 <input type="submit" value="Submit" className={styles.submit} />
               </div>
-            </form>
+            </div>
           </div>
         </form>
       )}

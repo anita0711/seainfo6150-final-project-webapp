@@ -12,9 +12,9 @@ import PlaceImage from "../PlaceImage/PlaceImage";
 const Home = () => {
   return (
     <>
-      <main>
+      <main className={styles.homeMain}>
         <div className="highlyRatedPlacesSection">
-          <div>
+          <div className={styles.title}>
             <h3>Highly Rated Places</h3>
           </div>
           <div className={styles.container}>
@@ -25,9 +25,9 @@ const Home = () => {
               <PlaceImage
                 img1={disneyLand}
                 title="Disneyland"
-                className={styles.image}
+                className={styles.containerItem}
               />
-              <p>Disneyland</p>
+              <p className={styles.placeName}>Disneyland</p>
             </Link>
 
             <Link
@@ -39,7 +39,7 @@ const Home = () => {
                 title="Yellowstone"
                 className={styles.image}
               />
-              <p>Yellowstone</p>
+              <p className={styles.placeName}>Yellowstone</p>
             </Link>
 
             <Link
@@ -51,13 +51,13 @@ const Home = () => {
                 title="New York"
                 className={styles.image}
               />
-              <p>New York</p>
+              <p className={styles.placeName}>New York</p>
             </Link>
           </div>
         </div>
 
         <div className="mostVisitedPlacesSection">
-          <div>
+          <div className={styles.title}>
             <h3>Most Visited Places</h3>
           </div>
           <div className={styles.container}>
@@ -70,7 +70,7 @@ const Home = () => {
                 title="Lake Tahoe"
                 className={styles.image}
               />
-              <p>Lake Tahoe</p>
+              <p className={styles.placeName}>Lake Tahoe</p>
             </Link>
 
             <Link
@@ -82,7 +82,7 @@ const Home = () => {
                 title="Yosemite"
                 className={styles.image}
               />
-              <p>Yosemite</p>
+              <p className={styles.placeName}>Yosemite</p>
             </Link>
 
             <Link
@@ -94,7 +94,7 @@ const Home = () => {
                 title="Washington DC"
                 className={styles.image}
               />
-              <p>Washington DC</p>
+              <p className={styles.placeName}>Washington DC</p>
             </Link>
           </div>
         </div>
@@ -104,7 +104,3 @@ const Home = () => {
 };
 
 export default Home;
-
-/*data
-http://demo3996095.mockable.io/
-*/

@@ -6,7 +6,7 @@ const PlaceListItem = (props) => {
   return (
     <div className={styles.placeListItem}>
       <PlaceImage img1={props.img1} title={props.title} />
-      <p>{props.title}</p>
+      <p className={styles.placeName}>{props.title}</p>
     </div>
   );
 };

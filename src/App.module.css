@@ -8,3 +8,51 @@ body {
   margin-right: auto;
   width: 30%;
 }
+
+.allPlaces {
+  background-image: url("./images/Background/AllPlaces.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.spring {
+  background-image: url("./images/Background/Spring.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.summer {
+  background-image: url("./images/Background/Summer.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fall {
+  background-image: url("./images/Background/Fall.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.winter {
+  background-image: url("./images/Background/Winter.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.kids {
+  background-image: url("./images/Background/Kids.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hiking {
+  background-image: url("./images/Background/Hiking.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sightseeing {
+  background-image: url("./images/Background/Sightseeing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

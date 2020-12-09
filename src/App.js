@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import styles from "./App.module.css";
 import { isEmpty } from "lodash";
-import Home from "./Home/Home.jsx";
+import Home from "./Home/Home";
 import Header from "./Header/Header";
 import PlacesList from "./PlacesList/PlacesList";
 import Place from "./Place/Place";
@@ -12,15 +12,7 @@ import Footer from "./Footer/Footer";
 import ContactUs from "./ContactUs/ContactUs";
 import Feedback from "./Feedback/Feedback";
 import ThankYou from "./ThankYou/ThankYou";
-
-// here is some external content. look at the /baz route below
-// to see how this content is passed down to the components via props
-const externalContent = {
-  id: "article-1",
-  title: "An Article",
-  author: "April Bingham",
-  text: "Some text in the article",
-};
+import PageNotFound from "./PageNotFound/PageNotFound";
 
 const App = () => {
   const [fetchedData, setFetchedData] = useState({});
@@ -39,73 +31,96 @@ const App = () => {
   }, [fetchedData]);
 
   let showAllPlaces;
-  let showHighlyRatedPlaces;
   let showSummerPlaces;
   let showFallPlaces;
   let showSpringPlaces;
   let showWinterPlaces;
   let showKidsPlaces;
   let showHikingPlaces;
-  let showScenaryPlaces;
+  let showSightseeingPlaces;
 
   if (!isEmpty(fetchedData)) {
-    const highlyRatedPlaces = Object.values(fetchedData.highlyRatedPlaces);
     const summerPlaces = Object.values(fetchedData.summer);
     const fallPlaces = Object.values(fetchedData.fall);
     const springPlaces = Object.values(fetchedData.spring);
     const winterPlaces = Object.values(fetchedData.winter);
     const kidsPlaces = Object.values(fetchedData.kids);
     const hikingPlaces = Object.values(fetchedData.hiking);
-    /*const sightSeeingPlaces = Object.values(fetchedData.sightSeeing);*/
+    const sightseeingPlaces = Object.values(fetchedData.sightseeing);
     const allPlaces = summerPlaces
       .concat(fallPlaces)
       .concat(winterPlaces)
       .concat(springPlaces)
       .concat(kidsPlaces)
-      .concat(hikingPlaces);
+      .concat(hikingPlaces)
+      .concat(sightseeingPlaces);
 
-    showHighlyRatedPlaces = (
-      <PlacesList places={highlyRatedPlaces} pageTitle="Highly Rated Places" />
-    );
     showSummerPlaces = (
-      <PlacesList
-        places={summerPlaces}
-        pageTitle="Best places for Summer season"
-      />
+      <div className={styles.summer}>
+        <PlacesList
+          places={summerPlaces}
+          pageTitle="Best places for Summer season"
+        />
+      </div>
     );
     showFallPlaces = (
-      <PlacesList places={fallPlaces} pageTitle="Best places for Fall season" />
+      <div className={styles.fall}>
+        <PlacesList
+          places={fallPlaces}
+          pageTitle="Best places for Fall season"
+        />
+      </div>
     );
     showSpringPlaces = (
-      <PlacesList
-        places={springPlaces}
-        pageTitle="Best places for Spring season"
-      />
+      <div className={styles.spring}>
+        <PlacesList
+          places={springPlaces}
+          pageTitle="Best places for Spring season"
+        />
+      </div>
     );
     showWinterPlaces = (
-      <PlacesList
-        places={winterPlaces}
-        pageTitle="Best places for Winter season"
-      />
+      <div className={styles.winter}>
+        <PlacesList
+          places={winterPlaces}
+          pageTitle="Best places for Winter season"
+        />
+      </div>
     );
     showKidsPlaces = (
-      <PlacesList places={kidsPlaces} pageTitle="Best places for Kids" />
+      <div className={styles.kids}>
+        <PlacesList places={kidsPlaces} pageTitle="Best places for Kids" />
+      </div>
     );
     showHikingPlaces = (
-      <PlacesList places={hikingPlaces} pageTitle="Best places for Hiking" />
+      <div className={styles.hiking}>
+        <PlacesList places={hikingPlaces} pageTitle="Best places for Hiking" />
+      </div>
     );
-    showAllPlaces = <PlacesList places={allPlaces} pageTitle="All places" />;
+    showSightseeingPlaces = (
+      <div className={styles.sightseeing}>
+        <PlacesList
+          places={sightseeingPlaces}
+          pageTitle="Best places for Sightseeing"
+        />
+      </div>
+    );
+    showAllPlaces = (
+      <div className={styles.allPlaces}>
+        <PlacesList
+          places={allPlaces}
+          pageTitle="All Places"
+          wallpaper="styles.AllPlaces"
+        />
+      </div>
+    );
   } else {
     showAllPlaces = (
       <div>
         <img className={styles.loading} src={Loading} alt="loading" />
       </div>
     );
-    showHighlyRatedPlaces = (
-      <div>
-        <img className={styles.loading} src={Loading} alt="loading" />
-      </div>
-    );
+
     showSummerPlaces = (
       <div>
         <img className={styles.loading} src={Loading} alt="loading" />
@@ -136,7 +151,7 @@ const App = () => {
         <img className={styles.loading} src={Loading} alt="loading" />
       </div>
     );
-    showScenaryPlaces = (
+    showSightseeingPlaces = (
       <div>
         <img className={styles.loading} src={Loading} alt="loading" />
       </div>
@@ -158,7 +173,7 @@ const App = () => {
         <Route path="/spring" exact render={() => showSpringPlaces} />
         <Route path="/kids" exact render={() => showKidsPlaces} />
         <Route path="/hiking" exact render={() => showHikingPlaces} />
-        <Route path="/scenary" exact render={() => showScenaryPlaces} />
+        <Route path="/sightseeing" exact render={() => showSightseeingPlaces} />
         <Route
           path="/place/:category/:placeId"
           exact
@@ -170,61 +185,11 @@ const App = () => {
           )}
         />
         <Route path="/thankyou" exact component={ThankYou} />
+        <Route component={PageNotFound} />
       </Switch>
       <Footer />
     </>
   );
 };
-
-/*function App() {
-  return (
-    <>
-      <header>
-        <nav>
-          <ul>
-            {/* these links should show you how to connect up a link to a specific route //}
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/foo">Foo</Link>
-            </li>
-            <li>
-              <Link to="/bar/hats/sombrero">Bar</Link>
-            </li>
-            <li>
-              <Link to="/baz">Baz</Link>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. //}
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/foo" exact component={Foo} />
-        {/* passing parameters via a route path //}
-        <Route
-          path="/bar/:categoryId/:productId"
-          exact
-          render={({ match }) => (
-            // getting the parameters from the url and passing
-            // down to the component as props
-            <Bar
-              categoryId={match.params.categoryId}
-              productId={match.params.productId}
-            />
-          )}
-        />
-        <Route
-          path="/baz"
-          exact
-          render={() => <Baz content={externalContent} />}
-        />
-        <Route component={Error} />
-      </Switch>
-    </>
-  );
-} */
 
 export default App;

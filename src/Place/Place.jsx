@@ -22,8 +22,8 @@ const Place = (props) => {
   if (!isEmpty(fetchedData)) {
     const place = fetchedData[props.category][props.placeId];
     showPlaceDetails = (
-      <div>
-        <div>
+      <div className={styles.wallpaper}>
+        <div className={styles.title}>
           <h2>{place.title}</h2>
         </div>
         <div>

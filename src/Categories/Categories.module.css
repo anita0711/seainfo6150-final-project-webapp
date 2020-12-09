@@ -9,14 +9,10 @@
   height: 38px;
 }
 
-.categoryLink {
-  text-decoration-line: none;
-  color: rgb(221, 95, 22);
-}
-
 .category:hover {
   transform: scale(1.1);
   cursor: pointer;
+  background-color: red;
 }
 
 .navbar {

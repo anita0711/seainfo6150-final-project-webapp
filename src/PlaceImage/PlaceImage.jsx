@@ -2,11 +2,7 @@ import React from "react";
 import styles from "./PlaceImage.module.css";
 
 const PlaceImage = ({ img1, title }) => {
-  return (
-    <div className={styles.image}>
-      <img src={img1} alt={title} />
-    </div>
-  );
+  return <img src={img1} alt={title} className={styles.image} />;
 };
 
 export default PlaceImage;

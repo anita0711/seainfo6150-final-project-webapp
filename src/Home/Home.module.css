@@ -10,10 +10,27 @@
   align-items: center;
 }
 
+.homeMain {
+  background-image: url("../images/Background/Home.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  display: inline-block;
+  background-color: rgb(153, 149, 149);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
 .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 15px;
+  column-gap: 25px;
+  padding-left: 10px;
 }
 
 .containerItem {
@@ -21,4 +38,16 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+}
+
+.placeName {
+  color: black;
+  background-color: white;
+  font-size: large;
+  border-radius: 10px;
+}
+
+.placeName:hover {
+  color: white;
+  background-color: darkgray;
 }

@@ -106,3 +106,8 @@ textarea:focus {
   box-shadow: 0px 10px 20px rgb(68, 139, 120);
   cursor: pointer;
 }
+
+.okText {
+  color: white;
+  text-decoration: none;
+}

@@ -15,19 +15,34 @@ const PlaceDetails = (props) => {
           title={props.title}
         />
       </div>
+      <div className={styles.detailsTag}>
+        <h3>Details:</h3>
+      </div>
 
-      <h3>Details:</h3>
-      <p>
-        State: {props.state} <br />
-        About: {props.about} <br />
-        Description: {props.description} <br />
-        Best for: {props.bestFor} <br />
-        Things to do: {props.thingsToDo} <br />
-        Best time to visit: {props.timeToVisit} <br />
-        Dining: {props.dining} <br />
-        Hotels: <a href={props.hotels}>See here</a> <br />
-        Map: <a href={props.map}>See here</a> <br />
-      </p>
+      <div className={styles.detailsContainer}>
+        <p>State:</p>
+        <p>{props.state} </p>
+        <p>About:</p>
+        <p>{props.about}</p>
+        <p>Description:</p>
+        <p>{props.description}</p>
+        <p>Best for:</p>
+        <p>{props.bestFor} </p>
+        <p>Things to do:</p>
+        <p>{props.thingsToDo}</p>
+        <p>Best time to visit:</p>
+        <p>{props.timeToVisit}</p>
+        <p>Dining:</p>
+        <p>{props.dining}</p>
+        <p>Hotels:</p>
+        <p>
+          <a href={props.hotels}>See here</a>
+        </p>
+        <div>Map:</div>
+        <p>
+          <a href={props.map}>See here</a>
+        </p>
+      </div>
     </>
   );
 };
