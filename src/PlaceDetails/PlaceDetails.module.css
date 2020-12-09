@@ -42,3 +42,21 @@
 .details {
   margin-left: 20px;
 }
+
+@media screen and (min-width: 150px) {
+  .imageSection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .imageSection {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .imageSection {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
