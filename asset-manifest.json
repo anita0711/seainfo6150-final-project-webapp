@@ -1,14 +1,30 @@
 {
   "files": {
-    "main.js": "/seainfo6150-final-project-webapp/static/js/main.1a3b1af7.chunk.js",
-    "main.js.map": "/seainfo6150-final-project-webapp/static/js/main.1a3b1af7.chunk.js.map",
+    "main.css": "/seainfo6150-final-project-webapp/static/css/main.348a5c97.chunk.css",
+    "main.js": "/seainfo6150-final-project-webapp/static/js/main.273741a0.chunk.js",
+    "main.js.map": "/seainfo6150-final-project-webapp/static/js/main.273741a0.chunk.js.map",
     "runtime~main.js": "/seainfo6150-final-project-webapp/static/js/runtime~main.c4d7f5e8.js",
     "runtime~main.js.map": "/seainfo6150-final-project-webapp/static/js/runtime~main.c4d7f5e8.js.map",
-    "static/js/2.fc54e8b9.chunk.js": "/seainfo6150-final-project-webapp/static/js/2.fc54e8b9.chunk.js",
-    "static/js/2.fc54e8b9.chunk.js.map": "/seainfo6150-final-project-webapp/static/js/2.fc54e8b9.chunk.js.map",
+    "static/js/2.ddc96845.chunk.js": "/seainfo6150-final-project-webapp/static/js/2.ddc96845.chunk.js",
+    "static/js/2.ddc96845.chunk.js.map": "/seainfo6150-final-project-webapp/static/js/2.ddc96845.chunk.js.map",
     "index.html": "/seainfo6150-final-project-webapp/index.html",
-    "precache-manifest.247f04989548970dcbda5769a0f254ed.js": "/seainfo6150-final-project-webapp/precache-manifest.247f04989548970dcbda5769a0f254ed.js",
+    "precache-manifest.0adbc0647054fce4e638706455b432b1.js": "/seainfo6150-final-project-webapp/precache-manifest.0adbc0647054fce4e638706455b432b1.js",
     "service-worker.js": "/seainfo6150-final-project-webapp/service-worker.js",
-    "static/media/treefrog.jpg": "/seainfo6150-final-project-webapp/static/media/treefrog.52b16bf8.jpg"
+    "static/css/main.348a5c97.chunk.css.map": "/seainfo6150-final-project-webapp/static/css/main.348a5c97.chunk.css.map",
+    "static/media/App.module.css": "/seainfo6150-final-project-webapp/static/media/Winter.5587a2a2.jpg",
+    "static/media/Disneyland.jpg": "/seainfo6150-final-project-webapp/static/media/Disneyland.8368147e.jpg",
+    "static/media/Home.module.css": "/seainfo6150-final-project-webapp/static/media/Home.83e5bbf6.jpg",
+    "static/media/Lake-Tahoe.jpg": "/seainfo6150-final-project-webapp/static/media/Lake-Tahoe.3c9a2936.jpg",
+    "static/media/NewYork.jpg": "/seainfo6150-final-project-webapp/static/media/NewYork.24f3f23e.jpg",
+    "static/media/PageNotFound.jpg": "/seainfo6150-final-project-webapp/static/media/PageNotFound.db892ba8.jpg",
+    "static/media/Place.module.css": "/seainfo6150-final-project-webapp/static/media/Place-Details.1579f16e.jpg",
+    "static/media/Washington-DC.jpg": "/seainfo6150-final-project-webapp/static/media/Washington-DC.56a243e0.jpg",
+    "static/media/Yellowstone.jpg": "/seainfo6150-final-project-webapp/static/media/Yellowstone.036aa1e4.jpg",
+    "static/media/Yosemite.jpg": "/seainfo6150-final-project-webapp/static/media/Yosemite.fb4774a1.jpg",
+    "static/media/about-us.jpg": "/seainfo6150-final-project-webapp/static/media/about-us.f0200802.jpg",
+    "static/media/feedback.png": "/seainfo6150-final-project-webapp/static/media/feedback.4f9b14fd.png",
+    "static/media/loading.gif": "/seainfo6150-final-project-webapp/static/media/loading.648a42ff.gif",
+    "static/media/logo.png": "/seainfo6150-final-project-webapp/static/media/logo.0c59cade.png",
+    "static/media/thankyou.jpg": "/seainfo6150-final-project-webapp/static/media/thankyou.3a220484.jpg"
   }
 }
