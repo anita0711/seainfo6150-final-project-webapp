@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the PlaceListItem component correctly 1`] = `
+<div>
+  <div
+    class="placeListItem"
+  >
+    <img
+      alt="Grand Teton National Park"
+      class="image"
+      src="https://mowryjournal.com/wp-content/uploads/2014/10/grand-teton-np-34-sunrise.jpg"
+    />
+    <p
+      class="placeName"
+    >
+      Grand Teton National Park
+    </p>
+  </div>
+</div>
+`;

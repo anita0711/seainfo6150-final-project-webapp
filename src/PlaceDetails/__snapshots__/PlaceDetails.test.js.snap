@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the PlaceDetails component correctly 1`] = `
+<div>
+  <div>
+    <div
+      class="imageSection"
+    >
+      <img />
+      <img />
+      <img />
+      <img />
+      <img />
+    </div>
+    <div
+      class="detailsTag"
+    >
+      <h3>
+        Details:
+      </h3>
+    </div>
+    <div
+      class="detailsContainer"
+    >
+      <p>
+        State:
+      </p>
+      <p>
+        California
+         
+      </p>
+      <p>
+        About:
+      </p>
+      <p>
+        Ideal destination for adventurers, hikers and sun seekers
+      </p>
+      <p>
+        Description:
+      </p>
+      <p />
+      <p>
+        Best for:
+      </p>
+      <p>
+         
+      </p>
+      <p>
+        Things to do:
+      </p>
+      <p>
+        Balboa Park, Coronado Beach, Mission and Pacific Beach
+      </p>
+      <p>
+        Best time to visit:
+      </p>
+      <p />
+      <p>
+        Dining:
+      </p>
+      <p>
+        Bobboi Natural Gelato, Ambrogio15, Parma Cucina Italiana
+      </p>
+      <p>
+        Hotels:
+      </p>
+      <p>
+        <a>
+          See here
+        </a>
+      </p>
+      <div>
+        Map:
+      </div>
+      <p>
+        <a>
+          See here
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;

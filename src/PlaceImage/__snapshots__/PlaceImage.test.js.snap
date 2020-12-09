@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the PlaceImage component correctly 1`] = `
+<div>
+  <img
+    alt="San Francisco"
+    class="image"
+    src="https://www.planetware.com/photos-large/USCA/california-san-francisco-golden-gate-bridge.jpg"
+  />
+</div>
+`;

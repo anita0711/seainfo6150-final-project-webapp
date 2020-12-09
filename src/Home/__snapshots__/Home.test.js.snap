@@ -1,56 +1,130 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders the home component correctly 1`] = `
+exports[`renders the Home component correctly 1`] = `
 <div>
-  <div>
-    The home page
-    <img
-      alt="tree frog"
-      src="/images/treefrog.jpg"
-    />
-    <div>
-      <form>
-        <label
-          for="myTextId"
+  <main
+    class="homeMain"
+  >
+    <div
+      class="highlyRatedPlacesSection"
+    >
+      <div
+        class="title"
+      >
+        <h3>
+          Highly Rated Places
+        </h3>
+      </div>
+      <div
+        class="container"
+      >
+        <a
+          class="containerItem"
+          href="/place/kids/001-orlandoWaltDisneyWorld"
         >
-          Input
-        </label>
-        <input
-          id="myTextId"
-          name="myText"
-          type="text"
-        />
-        <label
-          for="myDropdownId"
+          <img
+            alt="Disneyland"
+            class="image"
+            src="Disneyland.jpg"
+          />
+          <p
+            class="placeName"
+          >
+            Disneyland
+          </p>
+        </a>
+        <a
+          class="containerItem"
+          href="/place/summer/001-yellowstone"
         >
-          Input
-        </label>
-        <select
-          id="myDropdownId"
-          name="myDropdown"
+          <img
+            alt="Yellowstone"
+            class="image"
+            src="Yellowstone.jpg"
+          />
+          <p
+            class="placeName"
+          >
+            Yellowstone
+          </p>
+        </a>
+        <a
+          class="containerItem"
+          href="/place/winter/003-newYork"
         >
-          <option
-            value="foo"
+          <img
+            alt="New York"
+            class="image"
+            src="NewYork.jpg"
+          />
+          <p
+            class="placeName"
           >
-            Foo
-          </option>
-          <option
-            value="bar"
-          >
-            Bar
-          </option>
-          <option
-            value="baz"
-          >
-            Baz
-          </option>
-        </select>
-        <input
-          type="submit"
-          value="Send it"
-        />
-      </form>
+            New York
+          </p>
+        </a>
+      </div>
     </div>
-  </div>
+    <div
+      class="mostVisitedPlacesSection"
+    >
+      <div
+        class="title"
+      >
+        <h3>
+          Most Visited Places
+        </h3>
+      </div>
+      <div
+        class="container"
+      >
+        <a
+          class="containerItem"
+          href="/place/winter/002-lakeTahoe"
+        >
+          <img
+            alt="Lake Tahoe"
+            class="image"
+            src="Lake-Tahoe.jpg"
+          />
+          <p
+            class="placeName"
+          >
+            Lake Tahoe
+          </p>
+        </a>
+        <a
+          class="containerItem"
+          href="/place/hiking/001-yosemite"
+        >
+          <img
+            alt="Yosemite"
+            class="image"
+            src="Yosemite.jpg"
+          />
+          <p
+            class="placeName"
+          >
+            Yosemite
+          </p>
+        </a>
+        <a
+          class="containerItem"
+          href="/place/spring/003-washingtonDC"
+        >
+          <img
+            alt="Washington DC"
+            class="image"
+            src="Washington-DC.jpg"
+          />
+          <p
+            class="placeName"
+          >
+            Washington DC
+          </p>
+        </a>
+      </div>
+    </div>
+  </main>
 </div>
 `;

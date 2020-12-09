@@ -1,12 +1,12 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import Home from "./Home.jsx";
+import Categories from "./Categories.jsx";
 import { BrowserRouter } from "react-router-dom";
 
-it("renders the Home component correctly", () => {
+it("renders the Categories component correctly", () => {
   const { container } = render(
     <BrowserRouter>
-      <Home />
+      <Categories />
     </BrowserRouter>
   );
   expect(container).toMatchSnapshot();

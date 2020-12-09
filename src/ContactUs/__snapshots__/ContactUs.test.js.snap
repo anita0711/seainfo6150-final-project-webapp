@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the ContactUs component correctly 1`] = `
+<div>
+  <div
+    class="contactUsSection"
+  >
+    <div>
+      <h1>
+        Contact Us
+      </h1>
+    </div>
+    <div
+      class="contactDetails"
+    >
+      <p>
+        Should you need any help, please contact us here:
+      </p>
+      <i
+        class="fa"
+        style="font-size: 40px;"
+      >
+        
+      </i>
+       
+            +1 (123)-456-7890 
+      <br />
+      <i
+        class="fa"
+        style="font-size: 40px;"
+      >
+        
+      </i>
+       
+            
+      <u>
+        help@travelerstest.com
+      </u>
+    </div>
+  </div>
+</div>
+`;

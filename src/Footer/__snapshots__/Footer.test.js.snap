@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Footer component correctly 1`] = `
+<div>
+  <ul
+    class="container"
+  >
+    <li
+      class="option"
+    >
+      <a
+        class="optionLink"
+        href="/contactUs"
+      >
+        Contact Us
+      </a>
+    </li>
+    <li
+      class="option"
+    >
+      <a
+        class="optionLink"
+        href="/feedback"
+      >
+        Feedback
+      </a>
+    </li>
+  </ul>
+</div>
+`;

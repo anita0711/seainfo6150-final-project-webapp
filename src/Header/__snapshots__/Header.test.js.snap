@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Header component correctly 1`] = `
+<div>
+  <header
+    class="header"
+  >
+    <nav>
+      <div>
+        <a
+          href="/"
+        >
+          <img
+            alt="Traveler's logo"
+            class="logo"
+            src="logo.png"
+          />
+        </a>
+      </div>
+      <div
+        class="navbar"
+      >
+        <a
+          class="category"
+          href="/"
+        >
+          <i
+            class="fa"
+            style="color: white; font-size: 20px;"
+          >
+            
+          </i>
+          Home
+        </a>
+        <a
+          class="category"
+          href="/allPlaces"
+        >
+          All Places
+        </a>
+        <div
+          class="dropdown"
+        >
+          <button
+            class="dropbtn"
+          >
+            Travel by Season 
+            <i
+              class="fa fa-caret-down"
+            />
+          </button>
+          <div
+            class="dropdownContent"
+          >
+            <a
+              class="subCategoryItem"
+              href="/spring"
+            >
+              Spring
+            </a>
+            <a
+              class="subCategoryItem"
+              href="/summer"
+            >
+              Summer
+            </a>
+            <a
+              class="subCategoryItem"
+              href="/fall"
+            >
+              Fall
+            </a>
+            <a
+              class="subCategoryItem"
+              href="/winter"
+            >
+              Winter
+            </a>
+          </div>
+        </div>
+        <div
+          class="dropdown"
+        >
+          <button
+            class="dropbtn"
+          >
+            Best fit for 
+            <i
+              class="fa fa-caret-down"
+            />
+          </button>
+          <div
+            class="dropdownContent"
+          >
+            <a
+              class="subCategoryItem"
+              href="/kids"
+            >
+              Kids
+            </a>
+            <a
+              class="subCategoryItem"
+              href="/hiking"
+            >
+              Hiking
+            </a>
+            <a
+              class="subCategoryItem"
+              href="/sightseeing"
+            >
+              Sightseeing
+            </a>
+          </div>
+        </div>
+        <a
+          class="category"
+          href="/aboutUs"
+        >
+          About Us
+        </a>
+      </div>
+    </nav>
+  </header>
+</div>
+`;

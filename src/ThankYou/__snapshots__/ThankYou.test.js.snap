@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the ThankYou component correctly 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <img
+      alt="Thank you"
+      class="image"
+      src="thankyou.jpg"
+    />
+  </div>
+</div>
+`;

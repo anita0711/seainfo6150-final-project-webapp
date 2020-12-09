@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the Place component correctly 1`] = `
+<div>
+  <div>
+    <img
+      alt="loading"
+      class="loading"
+      src="loading.gif"
+    />
+  </div>
+</div>
+`;
